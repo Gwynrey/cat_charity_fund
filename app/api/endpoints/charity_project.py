@@ -30,8 +30,7 @@ async def get_all_charity_projects(
     Get all the charity projects.
     Endpoint is available for all users.
     """
-    charity_projects = await charityproject_crud.get_multiple(session)
-    return charity_projects
+    return await charityproject_crud.get_multiple(session)
 
 
 @router.post(
